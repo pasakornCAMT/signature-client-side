@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Route , Switch} from 'react-router-dom';
 import './App.css';
 import Menu from './components/menu/menu';
-import Category from './components/category/category'
+// import Category from './components/category/category'
 import Home from './components/dashboard/home'
 
 class App extends Component {
@@ -10,7 +10,6 @@ class App extends Component {
     return (
       <div className="App">
         <Menu/>
-        <Category/>
         <Switch>
           <Route exact path='/' component={Home}/>
         </Switch>

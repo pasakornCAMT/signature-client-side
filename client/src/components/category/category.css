@@ -1,9 +1,11 @@
 #categorybar {
   margin-top: 55px;
-  padding-left: 70px;
+  padding-left: 150px;
   padding-right: 50px;
   line-height:30px;
   height:30px;
+  position: static;
+
 }
 .c {
   font-weight: bold;

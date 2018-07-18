@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import './menu.css';
+import Logo from'./logo.png';
 
 class Menu extends Component {
+  constructor() {
+    super();
+    this.state = {
+
+    }
+  }
   render() {
     return (
       <nav id="menubar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a id="sig-logo" class="navbar-brand logo" >Signature</a>
+        <a class="navbar-left" href="/">
+          <img id="sig-logo" src={Logo} alt="signature logo"/>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -14,19 +23,10 @@ class Menu extends Component {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="m nav-link" href="/#">Link 1</a>
+              <a class="m nav-link" href="/#">Product</a>
             </li>
             <li class="nav-item active">
-              <a class="m nav-link" href="/#">Link 2</a>
-            </li>
-            <li class="nav-item active">
-              <a class="m nav-link" href="/#">Link 3</a>
-            </li>
-            <li class="nav-item active">
-              <a class="m nav-link" href="/#">Link 4</a>
-            </li>
-            <li class="nav-item active">
-              <a class="m nav-link" href="/#">Link 5</a>
+              <a class="m nav-link" href="/#">Map</a>
             </li>
           </ul>
           <ul class="navbar-nav">
