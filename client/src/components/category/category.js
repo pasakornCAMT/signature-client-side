@@ -14,17 +14,14 @@ class Category extends Component {
             <li class="nav-item">
               <a class="c nav-link" id="popular">Popular</a>
             </li>
-
             <li class="nav-item dropdown">
               <select class="selected">
-                <option value="volvo">category</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+                <option value="">category 1</option>
+                <option value="">category 2</option>
+                <option value="">category 3</option>
+                <option value="">category 4</option>
               </select>
-
             </li>
-
           </ul>
         </div>
       </nav>
