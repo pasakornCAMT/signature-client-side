@@ -4,7 +4,7 @@
   padding-right: 50px;
   padding-bottom: 35px;
   line-height:30px;
-  height:50px;
+  height:20px;
   position: static;
   margin: 5px;
 }
@@ -19,4 +19,14 @@
 #popular{
   font-size: 25px;
   padding-right: 20px;
+}
+.selected {
+  margin-top: 7px;
+  border: 0px;
+  font-size: 25px;
+  color: #999999;
+  font-weight: bold;
+  text-align: center;
+  background-color: inherit;
+  position: inherit;
 }

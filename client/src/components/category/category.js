@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './category.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class Category extends Component {
   render() {
@@ -13,17 +14,13 @@ class Category extends Component {
             <li class="nav-item">
               <a class="c nav-link" id="popular">Popular</a>
             </li>
-            <li class="nav-item">
-              <div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Category
-  </a>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Food</a>
-    <a class="dropdown-item" href="#">Gift</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+            <li class="nav-item dropdown">
+              <select class="selected">
+                <option value="">category 1</option>
+                <option value="">category 2</option>
+                <option value="">category 3</option>
+                <option value="">category 4</option>
+              </select>
             </li>
           </ul>
         </div>
