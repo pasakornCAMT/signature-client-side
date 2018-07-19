@@ -1,13 +1,22 @@
 #categorybar {
-  margin-top: 55px;
+  padding-top: 35px;
   padding-left: 150px;
   padding-right: 50px;
+  padding-bottom: 35px;
   line-height:30px;
-  height:30px;
+  height:50px;
   position: static;
-
+  margin: 5px;
 }
 .c {
   font-weight: bold;
   color: #000000;
+}
+#allproduct{
+  font-size: 30px;
+  color: #000000;
+}
+#popular{
+  font-size: 25px;
+  padding-right: 20px;
 }
