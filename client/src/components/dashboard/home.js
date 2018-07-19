@@ -8,7 +8,8 @@ class Home extends Component {
     return (
       <div class="gatsby-highlight">
         <img id="sss-web" src={FirstImg} alt="web img"/>
-              <Category/>
+        <Category/>
+        <img id="sss-web" src={FirstImg} alt="web img"/>
       </div>
 
     );
