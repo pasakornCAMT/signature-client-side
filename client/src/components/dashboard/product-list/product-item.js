@@ -12,7 +12,7 @@ class ProductItem extends Component {
         <div class="card-body">
           <div><b>{product.name}</b></div>
           <div>{product.description}</div>
-          <div>Price: {product.price} THB</div>
+          <div><b>Price: {product.price} THB</b></div>
           </div>
       </div>
 </div>
