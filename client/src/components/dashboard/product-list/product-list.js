@@ -29,18 +29,23 @@ class ProductList extends Component {
     let numOfCol = 0;
     return (
       <div class="container">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value={this.state.keyword} onChange={this.handleChange}/>
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        <br/>
+        <div class="row pt-2 pb-5">
+          <div class="col-12 d-flex justify-content-left">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value={this.state.keyword} onChange={this.handleChange}/>
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </div>
+        </div>
         <div class="row">
-        {
-          this.state.products.map((product,key)=>
+          {
+            this.state.products.map((product,key)=>
             <ProductItem key = {key} product = {product}/>
           )
         }
-        </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 }
 
 export default ProductList;
