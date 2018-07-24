@@ -22,18 +22,6 @@ class Menu extends Component {
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="m nav-link" href="/#">Product</a>
-            </li>
-            <li class="nav-item active">
-              <a class="m nav-link" href="/#">Map</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav">
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-            </form>
           </ul>
         </div>
       </nav>
