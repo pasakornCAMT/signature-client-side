@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './gashapon.css'
 import FirebaseService from '../../services/firebase';
+import { Link } from 'react-router-dom'
 
 class Gashapon extends Component {
     constructor(props) {
@@ -80,7 +81,7 @@ class Gashapon extends Component {
                             </div>
                             <div class="row">
                                 <div class="col-sm-2">
-                                    <input type="number" class="form-control" value={this.state.chance} onChange={this.handleChance.bind(this)}/>Chance
+                                    <input type="number" class="form-control" value={this.state.chance} onChange={this.handleChance.bind(this)} />Chance
                                 </div>
                                 {
                                     this.state.chance < 1 ? (
@@ -97,16 +98,21 @@ class Gashapon extends Component {
                             {
                                 this.state.gashaProducts.map((product, key) => (
                                     <div class="col-sm-4" id="item">
-                                        <div class="card" style={{ width: '10rem', alignItems: 'center', margin: 10, backgroundColor:  this.state.result == product.id ? '#7FFFD4': 'white' }}>
+                                        <div class="card" style={{ width: '10rem', alignItems: 'center', margin: 10, backgroundColor: this.state.result == product.id ? '#7FFFD4' : 'white' }}>
                                             <img id="product-item" src={product.image} width="150" height="150" />
                                             <div class="card-body">
-                                                <div><b>ID: {product.id}</b></div>
+                                                <div><b>Number: {product.id}</b></div>
                                                 <div><b>{product.name}</b></div>
                                             </div>
                                         </div>
                                     </div>
                                 ))
                             }
+                        </div>
+                        <div class="offset-sm-6">
+                            <Link to="/add-gasha">
+                                <button class="btn btn-warning">Add</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

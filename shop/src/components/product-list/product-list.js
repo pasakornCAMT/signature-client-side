@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import FirebaseService from '../../services/firebase';
 import firebase from '../../services/firebase';
 import ProductItem from './product-item';
-import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 class ProductList extends Component {
@@ -36,7 +35,8 @@ class ProductList extends Component {
             name: this.state.name,
             description: this.state.description,
             price: this.state.price,
-            category: this.state.category
+            category: this.state.category,
+            inGasha: false,
         }
         var data = FirebaseService.child('products').push(product);
         var key = data.getKey();
@@ -81,6 +81,8 @@ class ProductList extends Component {
                 case firebase.storage.TaskState.RUNNING: // or 'running'
                     console.log('Upload is running');
                     break;
+                default:
+                    break;    
             }
         }, function (error) {
             // Handle unsuccessful uploads
