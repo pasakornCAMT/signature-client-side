@@ -12,7 +12,7 @@ class Home extends Component {
           <img id="sss-web" src={FirstImg} alt="web img"/>
         </div>
         <div>
-          <Category/>
+          {/* <Category/> */}
         </div>
         <div>
           <ProductList/>
