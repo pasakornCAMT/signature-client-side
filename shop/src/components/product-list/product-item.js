@@ -5,7 +5,13 @@ import { Link } from 'react-router-dom'
 class ProductItem extends Component {
     onRemove() {
         const { product } = this.props
-        FirebaseService.child('products').child(product.id).remove()
+        if(window.confirm('Do you want to remove this product?')){
+            FirebaseService.database().ref().child('products').child(product.id).remove()
+            window.alert('Remove product success')
+        }
+    }
+    handleEditButton(){
+        this.props.onEdit(this.props.product)
     }
     render() {
         const { product } = this.props
@@ -20,9 +26,7 @@ class ProductItem extends Component {
                         <div>
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <Link to="/edit" product={product}>
-                                        <button type="button" class="btn">Edit</button>
-                                    </Link>
+                                    <button type="button" class="btn" onClick={this.handleEditButton.bind(this)}>Edit</button>
                                 </div>
                                 <div class="col-sm-6">
                                     <button type="button" class="btn btn-danger" onClick={this.onRemove.bind(this)}>Remove</button>

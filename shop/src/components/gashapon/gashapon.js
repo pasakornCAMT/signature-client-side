@@ -19,7 +19,7 @@ class Gashapon extends Component {
         let i = 1
         let products = [];
         let index = [];
-        FirebaseService.child('products').orderByChild('inGasha').equalTo(true).on('child_added', (snap) => {
+        FirebaseService.database().ref().child('products').orderByChild('inGasha').equalTo(true).on('child_added', (snap) => {
             products.push({
                 id: i,
                 image: snap.val().image,

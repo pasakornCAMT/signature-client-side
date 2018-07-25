@@ -11,7 +11,7 @@ class EditProduct extends Component {
       const {product} = this.props
     return (
       <div>
-        {product.name}
+        Edit Component
       </div>
     );
   }

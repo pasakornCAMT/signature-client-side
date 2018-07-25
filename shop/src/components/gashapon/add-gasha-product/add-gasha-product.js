@@ -11,24 +11,24 @@ class AddGashaProduct extends Component {
     };
   }
   componentWillMount() {
-    FirebaseService.child('products').orderByChild('inGasha').equalTo(false).on('value', (snap) => {
+    FirebaseService.database().ref().child('products').orderByChild('inGasha').equalTo(false).on('value', (snap) => {
       this.setState({ outGashaProducts: snap.val() })
     })
-    FirebaseService.child('products').orderByChild('inGasha').equalTo(true).on('value', (snap) => {
+    FirebaseService.database().ref().child('products').orderByChild('inGasha').equalTo(true).on('value', (snap) => {
       this.setState({ inGashaProducts: snap.val() })
     })
   }
 
   handleMoveIn(id) {
     console.log('id: ', id.target.value)
-    FirebaseService.child('products').child(id.target.value).update({
+    FirebaseService.database().ref().child('products').child(id.target.value).update({
       inGasha: true
     })
   }
 
   handleMoveOut(id) {
     console.log('id: ', id.target.value)
-    FirebaseService.child('products').child(id.target.value).update({
+    FirebaseService.database().ref().child('products').child(id.target.value).update({
       inGasha: false
     })
   }
