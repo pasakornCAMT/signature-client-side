@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>STC_01_View list of all products of the shop</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b0808720-2d85-404f-9c34-183799699cbf</testCaseGuid>
+</TestCaseEntity>
