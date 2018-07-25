@@ -45,28 +45,6 @@ class ProductList extends Component {
             id: key
         })
 
-        var filename = this.state.image.name
-        var storageRef = FirebaseService.storage().ref(filename)
-        var uploadTask = storageRef.put(this.state.image)
-        console.log('imageeee: ',uploadTask)
-        storageRef.getDownloadURL().then(url=>{
-            FirebaseService.database().ref().child('products').child(key).update({
-                image: url
-            })
-        })
-
-        // uploadTask.on('state_changed', function (snapshot) {
-
-        // }, function (error) {
-        //     // Handle unsuccessful uploads
-        // }, function () {
-        //     // Handle successful uploads on complete
-        //     // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-        //     uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-        //         console.log('File available at', downloadURL);
-        //     }); 
-        // });
-
         this.setState({
             name: '',
             description: '',
@@ -76,7 +54,6 @@ class ProductList extends Component {
         })
     }
     onSubmit(){
-        //this.fileUploadHandler()
         this.addProduct()
         window.alert('Add Product Success')
     }
